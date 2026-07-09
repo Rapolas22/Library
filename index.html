@@ -13,7 +13,7 @@
 <body>
     <header>
         <div>My Book Library</div>
-        <button class="button glow">
+        <button class="button glow" id="AddBtn">
             Add Book
             <svg class="glow-container">
                 <rect width="100%" height="100%" pathLength="100" stroke-linecap="round" class="glow-blur"></rect>
@@ -27,11 +27,32 @@
 
     </main>
 
-    <dialog>
-
+    <dialog id="my-dialog" >
+        <form>
+            <div>
+                <label for="Name">Name of the book</label>
+                <input type="text">
+            </div>
+            <div>
+                <label for="Author">Author of the book</label>
+                <input type="text">
+            </div>
+            <div>
+                <label for="Pages">Number of pages</label>
+                <input type="number">
+            </div>
+            <div class="checkbox">
+                <label for="Read">Has it been read?</label>
+                <input type="checkbox">
+            </div>
+        </form>
+        <div>
+            <button id="closeBtn">Close</button>
+            <button id="submit">Submit</button>
+        </div>
+        
     </dialog>
 
-    
 </body>
 <script src="script.js"></script>
 <script src="button.js"></script>

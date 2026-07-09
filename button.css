@@ -41,7 +41,7 @@
   height: calc(100% - var(--container-offset));
   x: calc(var(--container-offset) / 2);
   y: calc(var(--container-offset) / 2);
-  rx: 2rem; /* Sutampa su mygtuko border-radius */
+  rx: 2rem;
   fill: transparent;
   stroke: black;
   stroke-width: 5px;
