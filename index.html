@@ -4,19 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="button.css">
     <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap');
+    </style>
 </head>
 <body>
     <header>
         <div>My Book Library</div>
-        <button>Add Book</button>
+        <button class="button glow">
+            Add Book
+            <svg class="glow-container">
+                <rect width="100%" height="100%" pathLength="100" stroke-linecap="round" class="glow-blur"></rect>
+                <rect width="100%" height="100%" pathLength="100" stroke-linecap="round" class="glow-line"></rect>
+            </svg>
+        </button>
+        
     </header>
 
     <main>
 
     </main>
 
+    <dialog>
+
+    </dialog>
+
     
 </body>
 <script src="script.js"></script>
+<script src="button.js"></script>
 </html>

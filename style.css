@@ -1,0 +1,37 @@
+
+:root{
+    --bg-color: rgb(15, 15, 15);
+    
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    overflow-x: hidden;
+    width: 100vw;
+    background-color: var(--bg-color);
+
+}
+
+header{
+    height: 20%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.566) ;
+    padding: 20px 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header div{
+    font-family: 'Arimo';
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
