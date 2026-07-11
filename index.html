@@ -29,28 +29,28 @@
     </main>
 
     <dialog id="my-dialog" >
-        <form>
+        <form id="book-form">
             <div>
-                <label for="Name">Name of the book</label>
+                <label for="Name" id="name" name="name">Name of the book</label>
                 <input type="text">
             </div>
             <div>
-                <label for="Author">Author of the book</label>
+                <label for="Author" id="author" name="author">Author of the book</label>
                 <input type="text">
             </div>
             <div>
-                <label for="Pages">Number of pages</label>
+                <label for="Pages" id="pages" name="pages">Number of pages</label>
                 <input type="number">
             </div>
             <div class="checkbox">
                 <label for="Read">Has it been read?</label>
-                <input type="checkbox">
+                <input type="checkbox" id="read" name="read">
             </div>
         </form>
         <div>
             <button id="closeBtn">Close</button>
             <!-- <button id="submit">Submit</button> -->
-             <input type="submit" id="submit" value="Submit">
+             <input type="submit" id="submit-btn" value="Submit" form="book-form">
         </div>
         
     </dialog>
