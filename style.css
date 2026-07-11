@@ -155,6 +155,23 @@ dialog > div button{
 }
 
 
+/* Main */
+
+main {
+  flex: 1;
+  padding: 30px;
+  --grid-max-col-count: 4;
+  --grid-gap: 20px;
+  --grid-col-size-calc: calc((100% - var(--grid-gap) * (var(--grid-max-col-count) - 1)) / var(--grid-max-col-count));
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(var(--grid-col-size-calc), 1fr));
+  gap: var(--grid-gap);
+}
+
+.card{
+  background-color: white;
+  border-radius: 5px;
+}
 
 
 
