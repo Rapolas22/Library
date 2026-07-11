@@ -161,10 +161,20 @@ main {
   flex: 1;
   padding: 30px;
   --grid-max-col-count: 4;
+  --grid-min-row-count: 2;
   --grid-gap: 20px;
   --grid-col-size-calc: calc((100% - var(--grid-gap) * (var(--grid-max-col-count) - 1)) / var(--grid-max-col-count));
+  --grid-row-size-calc: calc((100% - var(--grid-gap) * (var(--grid-min-row-count) - 1)) / var(--grid-min-row-count));
+  
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(var(--grid-col-size-calc), 1fr));
+  
+  /* FIKSAŽAS: Sukuriame lygiai 4 stulpelius pagal tavo apskaičiuotą dydį */
+  grid-template-columns: repeat(var(--grid-max-col-count), var(--grid-col-size-calc));
+  
+  /* Paliekame 2 eilutes iškart */
+  grid-template-rows: repeat(var(--grid-min-row-count), var(--grid-row-size-calc));
+  grid-auto-rows: var(--grid-row-size-calc);
+  
   gap: var(--grid-gap);
 }
 
