@@ -75,74 +75,43 @@ dialog > div{
     justify-content: space-around;
 }
 
-dialog > div button{
+dialog > div button, input[type="submit"]{
     padding: 0.7em 2em;
     border: none;
     border-radius: 10px;
-    background-color: white;
     font-size: 15px;
     font-weight: 500;
 }
 
+
+
 /* Close button animation */
 
 #closeBtn {
-  background-color: transparent;
+  background-color: rgb(23, 23, 23);
   color: #ffffff;
   border: 2px solid #ffffff;
-  position: relative;
-}
-
-#closeBtn::after {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background-color: #ff00008d;
-  transition: width 0.3s ease;
-  z-index: -1;
-  border-radius: 10px;
-}
-
-#closeBtn:hover::after {
-  width: 100%;
+  transition: transform 0.3s;
 }
 
 #closeBtn:hover {
-  color: white;
+  transform: scale(1.1);
 }
 
 /* submit button animation */
 
-#submit {
-  background-color: transparent;
+input[type="submit"]{
+  background-color: rgb(23, 23, 23);
   color: #ffffff;
   border: 2px solid #ffffff;
-  position: relative;
+  transition: transform 0.3s;
+
 }
 
-#submit::after {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background-color: #57cf4c96;
-  transition: width 0.3s ease;
-  z-index: -1;
-  border-radius: 10px;
+input[type="submit"]:hover{
+  transform: scale(1.1);
 }
 
-#submit:hover::after {
-  width: 100%;
-}
-
-#submit:hover {
-  color: white;
-}
 
 /*  */
 
@@ -168,20 +137,105 @@ main {
   
   display: grid;
   
-  /* FIKSAŽAS: Sukuriame lygiai 4 stulpelius pagal tavo apskaičiuotą dydį */
   grid-template-columns: repeat(var(--grid-max-col-count), var(--grid-col-size-calc));
   
-  /* Paliekame 2 eilutes iškart */
   grid-template-rows: repeat(var(--grid-min-row-count), var(--grid-row-size-calc));
   grid-auto-rows: var(--grid-row-size-calc);
   
   gap: var(--grid-gap);
 }
 
-.card{
-  background-color: white;
-  border-radius: 5px;
+.card {
+  background-color: #1e1e1e;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  font-family: 'Arimo';
+  padding: 20px;
+  gap: 16px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+  transition: transform 0.2s ease, border-color 0.2s ease;
 }
+
+.card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(255, 255, 255, 0.25);
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.card-content h4 {
+  color: rgba(255, 255, 255, 0.45);
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.card-content p {
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  margin-top: -6px;
+  word-break: break-word;
+}
+
+.card-content p:first-of-type {
+  font-size: 19px;
+  font-weight: 700;
+}
+
+.status-btn {
+  align-self: flex-start;
+  padding: 0.5em 1.4em;
+  border: none;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  font-family: 'Arimo';
+  cursor: pointer;
+  transition: filter 0.2s ease;
+}
+
+.status-btn:hover {
+  filter: brightness(1.15);
+}
+
+.status-btn.read {
+  background-color: #57cf4c96;
+  color: white;
+}
+
+.status-btn.unread {
+  background-color: rgba(255, 255, 255, 0.12);
+  color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.buttons{
+  display:flex;
+  flex-direction: row;
+  gap: 20px;
+  
+}
+
+
+.remove-btn {
+  background-color: rgba(255, 60, 60, 0.15);
+  color: #ff9a9a;
+  border: 1px solid rgba(255, 60, 60, 0.3);
+}
+
+.remove-btn:hover {
+  background-color: rgba(255, 60, 60, 0.35);
+  color: white;
+  filter: none;
+}
+
 
 
 
